@@ -1,0 +1,23 @@
+/*this program applies jog to two different DC motors
+ * it applies jog to 1st motor in full speed in both direction
+ * and then provides jog to 2nd motor with 80% speed in reverse
+ * direction and 30% speed in forward direction
+ * created by Ashutosh M Bhatt (+91-9998476150), Gujarat (INDIA)
+ * on 22/10/2016
+ */
+#include <DC_Motor.h>
+
+DC_Motor motor(8,12);
+DC_Motor motor2(9,10,1);
+void setup() 
+{
+  
+}
+
+void loop() 
+{
+  motor.jogg_full_speed(1);
+  motor.jogg_full_speed(0);
+  motor2.jogg_set_speed(0,80);
+  motor2.jogg_set_speed(1,30);
+}

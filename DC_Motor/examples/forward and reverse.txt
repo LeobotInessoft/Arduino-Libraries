@@ -1,0 +1,26 @@
+/*this program will rotate DC motor forward for 5 sec
+then stop for 2 sec and again rotate motor reverse for 
+5 sec continuously
+created by A M Bhatt (+91-9998476150), Gujarat, INDIA
+ on 12/10/2016
+*/
+#include <DC_Motor.h>
+
+DC_Motor motor(8,12);
+
+void setup() 
+{
+  
+}
+
+void loop() 
+{
+  motor.forward();
+  delay(5000);
+  motor.stop_motor();
+  delay(2000);
+  motor.reverse();
+  delay(5000);
+  motor.stop_motor();
+  delay(2000);
+}
